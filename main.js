@@ -1,7 +1,7 @@
        //  Завдання 1 A function which prints str after n seconds.
 
 
-const strHello = setTimeout(function() { console.log('hello') }, 10000);
+//const strHello = setTimeout(function() { console.log('hello') }, 10000);
 
       //Завдання 2 A function which returns sum of all numbers from 1 to n using recursion
 
@@ -63,5 +63,24 @@ const filterNumbers = function (arr, maxNumber) {
 return newArr;
 }
 filterNumbers([1, 4, 8, 1, 20], 5) // [1, 4, 1]
+
+
+//    Завдання 7 A function that returns object with min and max numbers from array of numbers.
+const arr = [1, 4, 8, 2, 20];
+const minMax = function (arr) { 
+let minMaxObj = new Object();   
+    let getMaxOfArray = function (arr) {
+  return Math.max.apply(null, arr);
+};                 
+   let getMinOfArray = function (arr) {
+  return Math.min.apply(null, arr);
+};                                      
+    minMaxObj.max = getMaxOfArray (arr);
+    minMaxObj.min = getMinOfArray (arr);    
+
+return minMaxObj;
+}
+minMax([1, 4, 8, 2, 20]) // { max: 20, min: 1 }
+
 
 
