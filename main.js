@@ -83,4 +83,68 @@ return minMaxObj;
 minMax([1, 4, 8, 2, 20]) // { max: 20, min: 1 }
 
 
+// Завдання 10.A function accepts array of users and returns object of users where key is user id and value user data.
+const users = [
+  { id: 1, name: 'John', birthday: '1999-2-12' },
+  { id: 2, name: 'Bill', birthday: '1999-1-19' },
+  { id: 3, name: 'Carol', birthday: '1999-3-11' },
+  { id: 4, name: 'Luce', birthday: '1999-2-22' },
+];
+
+
+  function usersToObject(users) {  
+  const usersObject = {};
+    users.forEach((user) =>{
+        usersObject[user.id] = user;
+    })
+      
+      
+   return usersObject;     
+ }
+ 
+
+usersToObject(users);
+// {
+//  1: { id: 1, name: 'John', birthday: '1999-2-12' },
+//  2: { id: 2, name: 'Bill', birthday: '1999-1-19' },
+//  3: { id: 3, name: 'Carol', birthday: '1999-3-11' },
+//  4: { id: 4, name: 'Luce', birthday: '1999-2-22' }
+// };
+
+    //9. A function which concats all first-nested arrays in one array (use reduce):
+
+const arr1 = [[0, 1], [2, 3], [4, 5]];
+
+function concatFirstNestedArrays(arr1) {
+    
+let concated = arr1.reduce(function(a, b) {
+  return a.concat(b);
+});
+    return concated;
+
+}
+
+concatFirstNestedArrays(arr1);
+
+//concatFirstNestedArrays([[0, 1], [2, 3], [4, 5]]) // [0, 1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
